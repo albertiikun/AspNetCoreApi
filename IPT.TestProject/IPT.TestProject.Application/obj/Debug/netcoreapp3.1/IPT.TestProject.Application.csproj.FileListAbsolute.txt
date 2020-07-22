@@ -1,0 +1,12 @@
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\bin\Debug\netcoreapp3.1\IPT.TestProject.Application.deps.json
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\bin\Debug\netcoreapp3.1\IPT.TestProject.Application.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\bin\Debug\netcoreapp3.1\IPT.TestProject.Application.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\bin\Debug\netcoreapp3.1\IPT.TestProject.Domain.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\bin\Debug\netcoreapp3.1\IPT.TestProject.Domain.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.csprojAssemblyReference.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.csproj.CoreCompileInputs.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.AssemblyInfoInputs.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.AssemblyInfo.cs
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.csproj.CopyComplete
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Application\obj\Debug\netcoreapp3.1\IPT.TestProject.Application.pdb

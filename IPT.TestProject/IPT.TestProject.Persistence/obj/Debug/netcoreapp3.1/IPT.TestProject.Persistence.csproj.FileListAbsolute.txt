@@ -1,0 +1,17 @@
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Persistence.deps.json
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Persistence.runtimeconfig.json
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Persistence.runtimeconfig.dev.json
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Persistence.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Persistence.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Application.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Domain.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Application.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\bin\Debug\netcoreapp3.1\IPT.TestProject.Domain.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.csprojAssemblyReference.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.csproj.CoreCompileInputs.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.AssemblyInfoInputs.cache
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.AssemblyInfo.cs
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.csproj.CopyComplete
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.dll
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.pdb
+C:\Projects\C#\TestProject\IPT.TestProject\IPT.TestProject.Persistence\obj\Debug\netcoreapp3.1\IPT.TestProject.Persistence.genruntimeconfig.cache
