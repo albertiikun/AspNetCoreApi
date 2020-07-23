@@ -33,11 +33,11 @@ namespace IPT.TestProject.Application.Services.Users.Commands.Login
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
 
-            if (user == null) throw new Exception("You dosen't exists bro"); 
+            if (user == null) throw new Exception("User do not exists"); 
 
             var login = await _signInManager.PasswordSignInAsync(user, request.Password,true,true);
 
-            if (!login.Succeeded) throw new Exception("somthing wrong bro");
+            if (!login.Succeeded) throw new Exception("Somthing went wrong try again");
 
             var claims = await _userManager.GetClaimsAsync(user);
 

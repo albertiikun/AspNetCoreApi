@@ -24,25 +24,21 @@ namespace IPT.TestProject.Application.Services.Users.Queries.GetPermissions
         {
             var authUserId = UserHelper.AuthId();
 
-            return await _context.Users.Where(x => x.Id == authUserId).Select(user => new GetUserPermissionsModel
-            {
-                UserRoles = user.UserRoles.Select((userRole) => new UserRoleModel
+            var user = await _context.Users
+                .AsNoTracking()
+                .Include(x => x.UserRoles)
+                .ThenInclude(x => x.Role)
+                .ThenInclude(x => x.RoleHasPermissions)
+                .ThenInclude(x => x.Permission)
+                .FirstOrDefaultAsync(x => x.Id == authUserId);
+
+            return user.UserRoles
+                .SelectMany(x => x.Role.RoleHasPermissions)
+                .Select(x => new GetUserPermissionsModel
                 {
-                    Role = new RoleModel
-                    {
-                        Id = userRole.Role.Id,
-                        Name = userRole.Role.Name,
-                        RoleHasPermissions = userRole.Role.RoleHasPermissions.Select(roleHasPermission => new RoleHasPermissionModel
-                        {
-                            Permission = new PermissionModel
-                            {
-                                Id = roleHasPermission.Permission.Id,
-                                Name = roleHasPermission.Permission.Name
-                            }
-                        }).ToList()
-                    }
-                }).ToList()
-            }).ToListAsync();
+                    Id = x.Permission.Id,
+                    Name = x.Permission.Name
+                }).ToList();
         }
     }
 }

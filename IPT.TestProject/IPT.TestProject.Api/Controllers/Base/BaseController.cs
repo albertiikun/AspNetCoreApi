@@ -1,9 +1,11 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 namespace IPT.TestProject.Api.Controllers.Base
 {
     [ApiController]
+    [Authorize]
     public class BaseController : ControllerBase
     {
         private IMediator _mediator;

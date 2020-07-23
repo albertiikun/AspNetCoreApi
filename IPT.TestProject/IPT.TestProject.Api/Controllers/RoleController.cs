@@ -4,6 +4,7 @@ using IPT.TestProject.Api.Controllers.Base;
 using IPT.TestProject.Application.Services.Roles.Commands.Create;
 using IPT.TestProject.Application.Services.Roles.Queries.Get;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IPT.TestProject.Api.Controllers
 {
@@ -11,6 +12,7 @@ namespace IPT.TestProject.Api.Controllers
 
     public class RoleController : BaseController
     {
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetRoles([FromQuery] GetRoleQuery query)
         {
@@ -19,6 +21,7 @@ namespace IPT.TestProject.Api.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
         [HttpPost]
 
         public async Task<IActionResult> CreateRole([FromBody] CreateRoleCommand command)

@@ -22,6 +22,8 @@ namespace IPT.TestProject.Api.Controllers
             var result = await Mediator.Send(query);
             return Ok(result);
         }
+
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> AddUser([FromBody] AddUserCommand command)
         {
@@ -29,6 +31,7 @@ namespace IPT.TestProject.Api.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
         [HttpPost(":login")]
         public async Task<IActionResult> Login([FromBody] LoginCommand command)
         {
@@ -50,7 +53,6 @@ namespace IPT.TestProject.Api.Controllers
             return Ok(result);
         }
 
-        [Authorize]
         [HttpGet(":get-user-permissions")]
         public async Task<IActionResult> GetUserPermissions([FromQuery] GetUserPermissionsQuery query)
         {

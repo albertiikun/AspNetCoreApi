@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using IPT.TestProject.Application.Interfaces;
+using IPT.TestProject.Domain.Entities;
+using IPT.TestProject.Domain.Enum;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -8,8 +11,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using IPT.TestProject.Application.Interfaces;
-using IPT.TestProject.Domain.Entities;
 
 namespace IPT.TestProject.Application.Services.Users.Commands.Add
 {
@@ -47,23 +48,27 @@ namespace IPT.TestProject.Application.Services.Users.Commands.Add
         {
             string unknown = "N/A";
 
-            var permissions = await _context.Users
+            var claimName = new UserClaimEnum();
+
+            var getUser = await _context.Users
                 .Include(x => x.UserRoles)
                 .ThenInclude(x => x.Role)
                 .ThenInclude(x => x.RoleHasPermissions)
-                .ThenInclude(x => x.Permission).FirstOrDefaultAsync(x => x.Id == user.Id);
+                .ThenInclude(x => x.Permission)
+                .FirstOrDefaultAsync(x => x.Id == user.Id);
 
-            var permission = permissions.UserRoles.Select(x => x.Role.RoleHasPermissions.Select(x => x.Permission)).ToArray();
+            var permission = getUser.UserRoles.SelectMany(x => x.Role.RoleHasPermissions).Select(x => x.Permission.Name).Distinct().ToArray();
 
+          
             var claims = new List<Claim>
             {
-                new Claim("userId", user.Id.ToString() ?? unknown),
-                new Claim("email", user.Email ?? unknown),
-                new Claim("firstName", user.FirstName ?? unknown),
-                new Claim("lastName", user.LastName ?? unknown),
-                new Claim("roleName", role.Name ?? unknown),
-                new Claim("roleId", role.Id.ToString() ?? unknown),
-                new Claim("permissions", JsonConvert.SerializeObject(permission))
+                new Claim(claimName.UserId, user.Id.ToString() ?? unknown),
+                new Claim(claimName.Email, user.Email ?? unknown),
+                new Claim(claimName.FirstName, user.FirstName ?? unknown),
+                new Claim(claimName.LastName, user.LastName ?? unknown),
+                new Claim(claimName.RoleName, role.Name ?? unknown),
+                new Claim(claimName.RoleId, role.Id.ToString() ?? unknown),
+                new Claim(claimName.PermissionName, JsonConvert.SerializeObject(permission) ?? unknown)
             };
 
             await _userManager.AddClaimsAsync(user, claims);

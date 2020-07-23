@@ -7,7 +7,5 @@ namespace IPT.TestProject.Application.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-
-        public IList<RoleHasPermissionModel> RoleHasPermissions { get; set; } = new List<RoleHasPermissionModel>();
     }
 }
